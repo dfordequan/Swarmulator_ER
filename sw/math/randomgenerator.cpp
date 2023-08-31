@@ -9,6 +9,11 @@ random_generator::random_generator()
   generator.seed(rd());
 };
 
+void random_generator::set_seed(unsigned int seed)
+{
+  generator.seed(seed);
+}
+
 float random_generator::uniform_float(float min, float max)
 {
   std::uniform_real_distribution<> dist(min, max);

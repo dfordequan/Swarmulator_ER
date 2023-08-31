@@ -17,7 +17,7 @@ Environment::Environment(void)
   define_walls();
   if (!strcmp(param->fitness().c_str(), "food")) {
     mtx_env.lock();
-    environment.define_food(100);
+    environment.define_food(10, 42);
     environment.define_beacon(0., 0.);
     environment.nest = 8;
     mtx_env.unlock();
@@ -36,8 +36,9 @@ void Environment::define_walls(void)
   walls = read_matrix(filename);
 }
 
-void Environment::define_food(uint64_t n)
+void Environment::define_food(uint64_t n, unsigned int seed)
 {
+  rg.set_seed(seed);
   float lim = limits();
   for (size_t i = 0; i < n; i++) {
     food.push_back(std::vector<float>());

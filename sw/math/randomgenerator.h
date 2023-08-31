@@ -19,6 +19,7 @@ class random_generator
   std::default_random_engine generator;
 
 public:
+  void set_seed(unsigned int seed);
 
   /**
    * Constructor instatiates a list of all connections in the graph.

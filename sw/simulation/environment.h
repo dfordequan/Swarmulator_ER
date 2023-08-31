@@ -39,7 +39,7 @@ public:
    * You can indicate obstacle list in the conf/parameters.xml file, under <environment>
    * Make sure the file exists!
    */
-  void define_food(uint64_t n);
+  void define_food(uint64_t n, unsigned int seed);
 
 
   void define_beacon(float x, float y);

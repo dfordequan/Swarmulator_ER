@@ -28,10 +28,10 @@ print("Loading and building Swarmulator")
 sim = swarmulator.swarmulator(verbose=False)
 sim.make(controller=args.controller, agent=args.agent, clean=True, logger=False, verbose=False)
 # Swarmulator settings
-sim.runtime_setting("time_limit", str("100")) # Time limit of each simulation 
-sim.runtime_setting("simulation_realtimefactor", str("300")) # Real time factor
+sim.runtime_setting("time_limit", str("1000")) # Time limit of each simulation 
+sim.runtime_setting("simulation_realtimefactor", str("3000")) # Real time factor
 sim.runtime_setting("environment", "square") # Environment, leave empty for boundless
-sim.runtime_setting("fitness", "aggregation_clusters") # Fitness function to use (in sw/simulation/fitness_functions.h)
+sim.runtime_setting("fitness", "food") # Fitness function to use (in sw/simulation/fitness_functions.h)
 filename = "evo_run_%s_%s_%i" % (args.controller, args.agent, args.id)
 print("This run will save at every new generation in the file %s.pkl" % filename)
 print("If you want to resume, please load it using the -resume input option.")
@@ -62,7 +62,7 @@ e.setup(fitness, GENOME_LENGTH=8, POPULATION_SIZE=100)
 # Do not evolve, but only plot an evolution file as specified in args.plot
 if args.plot is not None:
     e.load(args.plot)
-    e.plot_evolution()
+    e.plot_evolution('gg_1.png')
 
 # Resume evolution from file args.resume
 elif args.resume is not None:

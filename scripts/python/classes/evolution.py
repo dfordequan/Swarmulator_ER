@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from deap import base, creator, tools
 matplotlib.rc('text', usetex=True)
+matplotlib.rcParams['text.usetex'] = False
 
 class evolution:
 	'''Wrapper around the DEAP package to run an evolutionary process with just a few commands'''

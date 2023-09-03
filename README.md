@@ -1,3 +1,11 @@
+## Readme
+This GitHub repository is part of Dequan Ou's AE4350 assignment: Optimizing the Swarm Behavior in a Foraging Task using the Artificial Bee Colony Algorithm
+
+To use the code:
+1. To run the swarm foraging simulation: first in './simulator/', run 'make clean && make CONTROLLER=forage AGENT=particle_oriented ANIMATION=ON', then './swarmulator 5'
+2. To run the ABC evolutionary algorithm: in './swarmulator/scripts/python', 'python3 evolution_abc.py forage particle_oriented -gen 10'
+3. To make the evolutionary mean/min/max fitness plot over generations: in './swarmulator/scripts/python', 'python3 evolution_abc.py forage particle_oriented -gen 10 -plot evo_run_forage_particle_oriented_4.pkl'
+
 # Swarmulator
 
 <img align="left" src="https://raw.githubusercontent.com/coppolam/swarmulator/master/logo.png">

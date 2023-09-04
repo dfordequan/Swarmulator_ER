@@ -6,6 +6,8 @@ To use the code:
 2. To run the ABC evolutionary algorithm: in `./swarmulator/scripts/python`, `python3 evolution_abc.py forage particle_oriented -gen 10`
 3. To make the evolutionary mean/min/max fitness plot over generations: in `./swarmulator/scripts/python`, `python3 evolution_abc.py forage particle_oriented -gen 10 -plot evo_run_forage_particle_oriented_4.pkl`
 
+Artificial Bee Colony Algorithm implementation in `./swarmulator/scripts/python/classes/evolution_abc.py`
+
 # Swarmulator
 
 <img align="left" src="https://raw.githubusercontent.com/coppolam/swarmulator/master/logo.png">
